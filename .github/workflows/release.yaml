@@ -5,14 +5,14 @@ on:
   push:
     # Publish `1.2.3` tags as releases.
     tags:
-    - '1.14.2'
+    - '*'
 
 jobs:
   build:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        arch: [ {platform: 'linux/amd64', name: 'x86_64'}, {platform: 'linux/arm64', name: 'aarch64'}, {platform: 'linux/arm', name: 'arm'}]
+        arch: [ {platform: 'linux/amd64', name: 'x86_64'}, {platform: 'linux/arm64', name: 'aarch64'}, {platform: 'linux/armv7', name: 'arm'}]
 
     steps:
     - name: Checkout
