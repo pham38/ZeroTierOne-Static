@@ -5,7 +5,7 @@ on:
   push:
     # Publish `1.2.3` tags as releases.
     tags:
-    - '*'
+    - '1.14.2'
 
 jobs:
   build:
